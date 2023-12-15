@@ -1,0 +1,61 @@
+<MyRoot>:
+    
+    orientation: 'vertical'
+    spacing: 10
+    padding: 50
+
+    canvas.before:
+        Color:
+            rgba:  172/255 ,221/255 ,231/255
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10, 10, 10, 10]
+    
+    MDBoxLayout:
+        size_hint_y: None
+        border_radius: 20
+        radius: [20]
+        height: "100dp"
+        md_bg_color: 0, 0, 0, 1
+        
+        MDLabel:
+            text: '[b]Medical Transcript Specialty Classifier[/b]'
+            font_size: 48
+            markup: True
+            bold: True
+            color: 1,1,1
+            halign: 'center'
+            size_hint_y: 1
+            height: self.texture_size[1]
+    
+    ScrollView:
+        size_hint_y: None
+        MDTextField:
+            id: transcript_input
+            icon_left: 'format-letter-case'
+            hint_text: 'Paste your transcript here'
+            mode: "rectangle"
+            fill_color: 1, 1, 1, 0.6
+            height: "40dp"
+            max_height: "200dp"
+            multiline: True
+            size_hint_y: None
+    
+    MDFillRoundFlatIconButton:
+        text: 'Classify Specialty'
+        on_press: root.classify_specialty()
+        icon: 'doctor'
+        md_bg_color: 0, 0, 0, 1
+        pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+        size_hint_x: None
+        theme_text_color: "Custom"
+        font_size: 50
+        text_color: 1, 1, 1, 1
+    
+    MDLabel:
+        id: output_label
+        text: ""
+        color: 0, 0, 0, 1
+        font_size: 50
+        halign: 'center'
