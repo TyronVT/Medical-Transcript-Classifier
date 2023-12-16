@@ -6,5 +6,7 @@ Made with TF DistilBERT
 
 Dataset scraped from https://www.mtsamples.com/index.asp
 
+TODO: Make the code cleaner, current code is modularized for the sake of being modularized.
+
 # UI
 <img src="https://raw.githubusercontent.com/TyronVT/Medical-Transcript-Classifier/main/TRANSCRIPT%20INPUT%20FIELD.png">
